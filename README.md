@@ -1,7 +1,4 @@
-# bit-sdub.github.io
 Public info from BIT-SDUB
 
+- [System Message](https://bit-sdub.github.io/systemMessage/) - Push out a collapsable system message that will display in from of all other content on the page.
 
-
-[Readme](https://bit-sdub.github.io/systemMessage/README.html)
-[Test page](https://bit-sdub.github.io/systemMessage/systemMessage.html)
