@@ -1,16 +1,16 @@
 /**
- *  @file topmenu.js
- *  @brief Button topmenu for Github pages
+ *  @file   topmenu.js
+ *  @brief  Button topmenu for Github pages
  *   
- *  @details   Inserts a top menu in front of body with
- *  	- Link to demo page (optional)
- *  	- Link to releases (optional)
- *  	- Link to sources (mandatory)
- *  	- Level up (mandatory)
- *  	- Home (mandatory)
+ *  @details    Inserts a top menu in front of body with
+ *      - Link to demo page (optional)
+ *      - Link to releases (optional)
+ *      - Link to sources (mandatory)
+ *      - Level up (mandatory)
+ *      - Home (mandatory)
  *  
  *  Place this file in page.io's root dir
- *  NOTE!! Update SITE
+ *  NOTE!! Update SITE + LOGO
  *  
  *  Call from _config.yml
  *  
@@ -26,83 +26,82 @@
  *  @copyright http://www.gnu.org/licenses/lgpl.txt LGPL version 3
  *  @author    Erik Bachmann <ErikBachmann@ClicketyClick.dk>
  *  @since     2022-11-18T10:22:57 / Erik Bachmann
- *  @version   2022-11-18T15:13:24 / Erik Bachmann
+ *  @version   2022-11-18T16:12:34 / Erik Bachmann
  */
-// ClicketyClick.github.io/docs/incl.js
 
-var SITE 	= "bit-sdub";
-var HEAD	= "<div align='right'>";
-var LOGO	= "/bit.jpg";
-var LOGO_HEIGHT	= "64px"
-var LOGO_WIDTH	= "auto";
-var FOOTER	= "<hr>&copy;2022 BIT@bib.sdu.dk";
+var SITE        = "bit-sdub";
+var HEAD        = "<div align='right'>";
+var LOGO        = "/bit.jpg";
+var LOGO_HEIGHT = "64px"
+var LOGO_WIDTH  = "auto";
+var FOOTER      = "<hr>&copy;2022 BIT@bib.sdu.dk";
+
 console.log(SITE +".github.io/topmenu.js loading");
 
 // Activate DEMO button
 if ( typeof DEMO !== 'undefined' ) {
-	DEMO = "<button onclick=\"location.href='https://"
+    DEMO = "<button onclick=\"location.href='https://"
     + SITE
     + ".github.io/"
     +REPO
-  + "/"
-  +	DEMO
-  + "'\" title='Demo' type='button' title='Demo'>&#x24B9;</button>";
+    + "/"
+    +    DEMO
+    + "'\" title='Demo' type='button' title='Demo'>&#x24B9;</button>";
 } else {
-	DEMO = "";
+    DEMO = "";
 }
 
 // Activate RELEASE button
 if ( typeof RELEASE !== 'undefined' ) {
-	RELEASE = "<button onclick=\"location.href='https://"
+    RELEASE = "<button onclick=\"location.href='https://"
     + SITE
     + ".github.io/"
     +REPO
-  + "/"
-  +	RELEASE
-  + "'\" title='RELEASE' type='button' title='Releases'>&#x24C7;</button>";
+    + "/"
+    +    RELEASE
+    + "'\" title='RELEASE' type='button' title='Releases'>&#x24C7;</button>";
 } else {
-	RELEASE = "";
+    RELEASE = "";
 }
 
 // Only repos can have home, up etc. buttons
 if ( typeof REPO !== 'undefined' ) {
-	console.log( "REPO defined: "+REPO);
-	HEAD	= HEAD
+    console.log( "REPO defined: "+REPO);
+    HEAD    = HEAD
 // Demo
-	+ DEMO
-
+    + DEMO
 // Releases
-	+ RELEASE
-
+    + RELEASE
 // Source
-  + "<button onclick=\"location.href='https://github.com/"
+    + "<button onclick=\"location.href='https://github.com/"
     + SITE
     + "/"
     + REPO
-  + "'\" type='button' title='Source'>&lt;&gt;</button>"
-
-  + "&nbsp;"
+    + "'\" type='button' title='Source'>&lt;&gt;</button>"
+// Gap
+    + "&nbsp;"
 // Up
-  + "<button onclick=\"location.href='..'\" type='button' title='Up'>&#x2303;</button>"
+    + "<button onclick=\"location.href='..'\" type='button' title='Up'>&#x2303;</button>"
 // Home
-  + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
-  + "<img style='float:left;' height="+LOGO_HEIGHT+" width="+LOGO_WIDTH+" src='"+LOGO+"'>";
-  
-} else {
-	HEAD	+= "<img style='float:right;' height="+LOGO_HEIGHT+" width="+LOGO_WIDTH+" src='https://"
+    + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
+    + "<img style='float:left;' height="+LOGO_HEIGHT+" width="+LOGO_WIDTH+" src='"+LOGO+"'>"
+    ;
+} else {    // REPO not defined
+    HEAD    += "<img style='float:right;' height="+LOGO_HEIGHT+" width="+LOGO_WIDTH+" src='https://"
     + SITE
     + ".github.io/"
-		+ LOGO
-	+ "'>";
-	REPO	= "";
-	console.log( "REPO not defined: "+REPO);
+        + LOGO
+    + "'>"
+    ;
+    REPO    = "";
+    console.log( "REPO not defined: "+REPO);
 }
 
-HEAD	+= "</div>";
+HEAD    += "</div>";
 
 console.log("SITE=["+SITE+"] REPO=["+REPO+"]");
 
 document.getElementsByTagName("body")[0].innerHTML = HEAD + document.getElementsByTagName("body")[0].innerHTML + FOOTER;
 
 console.log(SITE +".github.io/docs/topmenu.js  Header and footer inserted");
-console.log(SITE +".github.io/docs/topmenu.js  ended");
+console.log(SITE +".github.io/docs/topmenu.js  loaded");
