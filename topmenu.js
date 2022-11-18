@@ -34,8 +34,6 @@ console.log("ClicketyClick.github.io/docs/topmenu.js loading");
 var SITE  = "bit-sdub";
 var HEAD =  "<div align='right'>";
 
-console.log("SITE=["+SITE+"] REPO=["+REPO+"]");
-
 // Activate DEMO button
 if ( typeof DEMO !== 'undefined' ) {
 	DEMO = "<button onclick=\"location.href='https://"
@@ -86,9 +84,13 @@ if ( typeof REPO !== 'undefined' ) {
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
 } else {
 	HEAD	+= ".";
+	REPO	= "";
 }
 
 HEAD	+= "</div>";
+
+console.log("SITE=["+SITE+"] REPO=["+REPO+"]");
+
 
 var FOOTER = "<hr>&copy;2022 Clicketyclick.dk";
 document.getElementsByTagName("body")[0].innerHTML = HEAD + document.getElementsByTagName("body")[0].innerHTML + FOOTER;
