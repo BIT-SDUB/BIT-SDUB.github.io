@@ -30,11 +30,12 @@
  */
 
 var SITE        = "bit-sdub";
-var HEAD        = "<div align='right'>";
+var EMAIL       = "BIT@bib.sdu.dk";
 var LOGO        = "/bit.jpg";
+
+var HEAD        = "<div align='right'>";
 var LOGO_HEIGHT = "64px"
 var LOGO_WIDTH  = "auto";
-var FOOTER      = "<hr>&copy;2022 BIT@bib.sdu.dk";
 
 console.log(SITE +".github.io/topmenu.js loading");
 
@@ -98,6 +99,8 @@ if ( typeof REPO !== 'undefined' ) {
 }
 
 HEAD    += "</div>";
+var FOOTER   = "<hr>&copy;2022 <a href='mailto:"+EMAIL+"?Subject="+SITE+"."+REPO+": '>";
+
 
 console.log("SITE=["+SITE+"] REPO=["+REPO+"]");
 
