@@ -66,7 +66,6 @@ if ( typeof RELEASE !== 'undefined' ) {
 if ( typeof REPO !== 'undefined' ) {
 	console.log( "REPO defined: "+REPO);
 	HEAD	= HEAD
-	+ '<img style="float:left;" height=64px width=auto src="'+LOGO+'">';
 // Demo
 	+ DEMO
 
@@ -85,6 +84,7 @@ if ( typeof REPO !== 'undefined' ) {
   + "<button onclick=\"location.href='..'\" type='button' title='Up'>&#x2303;</button>"
 // Home
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
+  + '<img style="float:left;" height=64px width=auto src="'+LOGO+'">'
 } else {
 	HEAD	+= "<img style='float:right;' src='https://"
     + SITE
