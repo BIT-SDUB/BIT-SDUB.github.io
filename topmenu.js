@@ -31,8 +31,9 @@
 // ClicketyClick.github.io/docs/incl.js
 console.log("ClicketyClick.github.io/docs/topmenu.js loading");
 
-var SITE  = "bit-sdub";
-var HEAD =  "<div align='right'>";
+var SITE 	= "bit-sdub";
+var HEAD	= "<div align='right'>";
+var LOGO	= "/bit.jpg";
 
 // Activate DEMO button
 if ( typeof DEMO !== 'undefined' ) {
@@ -63,7 +64,7 @@ if ( typeof RELEASE !== 'undefined' ) {
 // Only repos can have home, up etc. buttons
 if ( typeof REPO !== 'undefined' ) {
 	HEAD	= HEAD
-
+	+ '<img style="float:left;" height=64wh width=auto src="'+LOGO+'">';
 // Demo
 	+ DEMO
 
@@ -83,7 +84,7 @@ if ( typeof REPO !== 'undefined' ) {
 // Home
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
 } else {
-	HEAD	+= ".";
+	HEAD	+= '<img style="float:right;" src="/'+LOGO+'">';
 	REPO	= "";
 }
 
