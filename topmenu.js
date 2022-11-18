@@ -88,7 +88,9 @@ if ( typeof REPO !== 'undefined' ) {
 } else {
 	HEAD	+= "<img style='float:right;' src='https://"
     + SITE
-    + ".github.io/"+LOGO+"'>";
+    + ".github.io/"
+		+ LOGO
+	+"'>";
 	REPO	= "";
 	console.log( "REPO not defined: "+REPO);
 }
