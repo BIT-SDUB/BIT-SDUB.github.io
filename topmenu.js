@@ -10,6 +10,7 @@
  *  	- Home (mandatory)
  *  
  *  Place this file in page.io's root dir
+ *  NOTE!! Update SITE
  *  
  *  Call from _config.yml
  *  
@@ -31,7 +32,7 @@
 console.log("ClicketyClick.github.io/docs/topmenu.js loading");
 console.log("REPO=["+REPO+"]");
 
-var SITE  = "Clicketyclick";
+var SITE  = "bit-sdub";
 
 if ( typeof DEMO !== 'undefined' ) {
 	DEMO = "<button onclick=\"location.href='https://"
