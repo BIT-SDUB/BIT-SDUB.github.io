@@ -86,7 +86,9 @@ if ( typeof REPO !== 'undefined' ) {
 // Home
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
 } else {
-	HEAD	+= '<img style="float:right;" src="/'+LOGO+'">';
+	HEAD	+= "<img style='float:right;' src='https://"
+    + SITE
+    + ".github.io/"+LOGO+"'>";
 	REPO	= "";
 	console.log( "REPO not defined: "+REPO);
 }
