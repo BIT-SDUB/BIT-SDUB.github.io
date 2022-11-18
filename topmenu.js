@@ -30,9 +30,11 @@
  */
 // ClicketyClick.github.io/docs/incl.js
 console.log("ClicketyClick.github.io/docs/topmenu.js loading");
-console.log("REPO=["+REPO+"]");
 
 var SITE  = "bit-sdub";
+
+console.log("SITE=["+SITE+"] REPO=["+REPO+"]");
+
 
 if ( typeof DEMO !== 'undefined' ) {
 	DEMO = "<button onclick=\"location.href='https://"
