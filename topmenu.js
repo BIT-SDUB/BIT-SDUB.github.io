@@ -34,6 +34,7 @@ console.log("ClicketyClick.github.io/docs/topmenu.js loading");
 var SITE 	= "bit-sdub";
 var HEAD	= "<div align='right'>";
 var LOGO	= "/bit.jpg";
+var FOOTER = "<hr>&copy;2022 BIT@bib.sdu.dk";
 
 // Activate DEMO button
 if ( typeof DEMO !== 'undefined' ) {
@@ -95,7 +96,7 @@ HEAD	+= "</div>";
 console.log("SITE=["+SITE+"] REPO=["+REPO+"]");
 
 
-var FOOTER = "<hr>&copy;2022 Clicketyclick.dk";
+
 document.getElementsByTagName("body")[0].innerHTML = HEAD + document.getElementsByTagName("body")[0].innerHTML + FOOTER;
 
 console.log("ClicketyClick.github.io/docs/topmenu.js  Header and footer inserted");
