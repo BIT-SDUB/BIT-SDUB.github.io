@@ -33,6 +33,8 @@
 var SITE 	= "bit-sdub";
 var HEAD	= "<div align='right'>";
 var LOGO	= "/bit.jpg";
+var LOGO_HEIGHT	= "64px"
+var LOGO_WIDTH	= "auto";
 var FOOTER	= "<hr>&copy;2022 BIT@bib.sdu.dk";
 console.log(SITE +".github.io/topmenu.js loading");
 
@@ -84,13 +86,14 @@ if ( typeof REPO !== 'undefined' ) {
   + "<button onclick=\"location.href='..'\" type='button' title='Up'>&#x2303;</button>"
 // Home
   + "<button onclick=\"location.href='/'\" type='button' title='Home'>&#x1F3E0;</button>"
-  + '<img style="float:left;" height=64px width=auto src="'+LOGO+'">'
+  + "<img style='float:left;' height="+LOGO_HEIGHT+" width="+LOGO_WIDTH+" src='"+LOGO+"'>";
+  
 } else {
-	HEAD	+= "<img style='float:right;' src='https://"
+	HEAD	+= "<img style='float:right;' height="+LOGO_HEIGHT+" width="+LOGO_WIDTH+" src='https://"
     + SITE
     + ".github.io/"
 		+ LOGO
-	+"'>";
+	+ "'>";
 	REPO	= "";
 	console.log( "REPO not defined: "+REPO);
 }
