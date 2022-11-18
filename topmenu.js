@@ -99,7 +99,7 @@ if ( typeof REPO !== 'undefined' ) {
 }
 
 HEAD    += "</div>";
-var FOOTER   = "<hr>&copy;2022 <a href='mailto:"+EMAIL+"?Subject="+SITE+"."+REPO+": '>";
+var FOOTER   = "<hr>&copy;2022 <a href='mailto:"+EMAIL+"?Subject="+SITE+"."+REPO+": '>"+EMAIL+"</a>";
 
 
 console.log("SITE=["+SITE+"] REPO=["+REPO+"]");
