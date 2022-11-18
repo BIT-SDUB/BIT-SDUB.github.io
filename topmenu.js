@@ -63,8 +63,9 @@ if ( typeof RELEASE !== 'undefined' ) {
 
 // Only repos can have home, up etc. buttons
 if ( typeof REPO !== 'undefined' ) {
+	console.log( "REPO defined: "+REPO);
 	HEAD	= HEAD
-	+ '<img style="float:left;" height=64wh width=auto src="'+LOGO+'">';
+	+ '<img style="float:left;" height=64px width=auto src="'+LOGO+'">';
 // Demo
 	+ DEMO
 
@@ -86,6 +87,7 @@ if ( typeof REPO !== 'undefined' ) {
 } else {
 	HEAD	+= '<img style="float:right;" src="/'+LOGO+'">';
 	REPO	= "";
+	console.log( "REPO not defined: "+REPO);
 }
 
 HEAD	+= "</div>";
