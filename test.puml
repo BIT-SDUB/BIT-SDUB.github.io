@@ -1,0 +1,30 @@
+@startuml
+
+title "Comments - Sequence Diagram"
+
+'This is a single line comment
+
+/'
+This is a multi-
+line comment
+'/
+autonumber 
+actor User
+boundary "pingtest.html" as HTML
+'control "Shopping Cart" as SC
+entity pingtest.js as TEST
+'database Widgets
+database Targets.js as TARGETS
+database Styles as CSS
+
+User -> HTML : Request
+HTML <- CSS : Read styles
+HTML <- TARGETS : Read Targets
+HTML <- TEST : Load test
+HTML -> TEST : Build fields
+HTML <- TEST : Object added
+
+HTML -> TEST : Schedule updates
+HTML <- TEST : Object updated
+
+@enduml
